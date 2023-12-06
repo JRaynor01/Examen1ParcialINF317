@@ -1,0 +1,29 @@
+
+La taxonomía de Flynn es un sistema que clasifica las arquitecturas de computadoras en función del número de instrucciones y 
+datos que pueden procesar simultáneamente. Fue propuesta por Michael J. Flynn en 1966 y se divide en cuatro categorías:
+
+-SISD (Single Instruction stream, Single Data stream): Un solo flujo de instrucciones y un solo flujo de datos. Es el tipo más 
+simple y representa una computadora convencional de un solo procesador.
+
+-SIMD (Single Instruction stream, Multiple Data streams): Un solo flujo de instrucciones controla múltiples unidades de procesamiento 
+de datos. Esto se asemeja al procesamiento en paralelo y se utiliza comúnmente en operaciones que implican conjuntos de datos grandes y 
+homogéneos. Ejemplos de bibliotecas que aprovechan SIMD incluyen:
+
+-NumPy: Biblioteca de Python que proporciona funciones para realizar operaciones matriciales y otras operaciones numéricas de manera 
+eficiente, utilizando la vectorización para aprovechar las instrucciones SIMD disponibles en hardware moderno.
+
+-OpenMP: API de programación para la computación en paralelo que puede utilizar SIMD para mejorar el rendimiento de bucles y 
+operaciones similares.
+
+-MISD (Multiple Instruction streams, Single Data stream): Múltiples flujos de instrucciones operan sobre un solo conjunto de datos. 
+Esta configuración es menos común en sistemas actuales y no tiene aplicaciones tan amplias como las otras categorías.
+
+-MIMD (Multiple Instruction streams, Multiple Data streams): Múltiples flujos de instrucciones operan de manera independiente sobre 
+múltiples conjuntos de datos. Este enfoque se utiliza en sistemas de procesamiento paralelo, donde cada procesador puede ejecutar un 
+conjunto diferente de instrucciones en datos independientes. Ejemplos de bibliotecas que trabajan con modelos MIMD incluyen:
+
+-MPI (Message Passing Interface): Biblioteca que permite la comunicación entre procesadores en sistemas de computación distribuida, 
+lo que permite la ejecución de instrucciones diferentes en diferentes nodos.
+
+Apache Spark: Un marco de procesamiento distribuido que opera en un entorno MIMD, donde diferentes nodos pueden ejecutar diferentes 
+tareas en conjuntos de datos distribuidos.
